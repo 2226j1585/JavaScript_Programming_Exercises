@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+var question1;
+var question2;
+var question3;
+var question;
+var showQuestionInfo;
+
+question1 = {
+    question: "What is the capital of France?",
+    options: ["1. Berlin", "2. Madrid", "3. Paris", "4. Rome"],
+    answer: 3
+};
+
+question2 = {
+    question: "Which planet is known as the Red Planet?",
+    options: ["1. Vensu", "2. Mars", "3. Mercury", "4. Earth"],
+    answer: 2
+};
+
+question3 = {
+    question: "Who wrote 'To Kill a Mockingbird'?",
+    options: ["1. Harper Lee", "2. Mark Twain", "3. J.K. Rowling", "4. Ernest Hemingway"],
+    answer: 1
+};
+
+showQuestionInfo = function () {
+    console.log("Question: " + question.question);
+    console.log("Options: ");
+    for (var i = 0; i < question.options.length; i++) {
+        console.log(question.options[i]);
+    }
+    console.log("Answer: " + question.options[question.answer - 1]);
+    console.log("------------------------------");
+};
+
+question = question1;
+showQuestionInfo();
+
+question = question2;
+showQuestionInfo();
+
+question = question3;
+showQuestionInfo();
+
+    </script>
+</body>
+</html>
