@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var showSum, showProduct, showDifference, showQuotient;
+
+showSum = function (number1, number2) {
+	var total = number1 + number2;
+	console.log("The sum is " + total);
+};
+
+showProduct = function (number1, number2) {
+	var product = number1 * number2;
+	console.log("The product is " + product);
+};
+
+showDifference = function (number1, number2) {
+	var difference = number1 - number2;
+	console.log("The difference is " + difference);
+};
+
+showQuotient = function (number1, number2) {
+	if (number2 !== 0) {
+		var quotient = number1 / number2;
+		console.log("The quotient is " + quotient);
+	} else {
+		console.log("Division by zero is not allowed.");
+	}
+};
+
+showSum(30, 23);
+showSum(2.8, -5);
+showSum(56, 74);
+
+showProduct(3, 5);
+showProduct(7, 8);
+showProduct(1.2, 4.5);
+
+showDifference(10, 5);
+showDifference(20, 30);
+showDifference(3.5, 1.2);
+
+showQuotient(10, 2);
+showQuotient(20, 4);
+showQuotient(7, 0);
+
+    </script>
+</body>
+</html>
