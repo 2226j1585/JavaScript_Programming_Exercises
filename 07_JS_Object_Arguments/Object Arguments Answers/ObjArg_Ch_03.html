@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var buildCar;
+var getCarInfo;
+var car1;
+var car2;
+
+buildCar = function (make, model, year, type, mileage) {
+    return {
+        make: make,
+        model: model,
+        year: year,
+        type: type,
+        mileage: mileage
+    };
+};
+
+getCarInfo = function (car) {
+    return car.make.toUpperCase() + " " + car.model + ": " + car.year + ", " + car.type + " with " + car.mileage + " miles";
+};
+
+car1 = buildCar("Toyota", "Camry", 2020, "Sedan", 15000);
+car2 = buildCar("Ford", "F-150", 2018, "Truck", 30000);
+
+console.log(getCarInfo(car1));
+console.log(getCarInfo(car2));
+
+    </script>
+</body>
+</html>
