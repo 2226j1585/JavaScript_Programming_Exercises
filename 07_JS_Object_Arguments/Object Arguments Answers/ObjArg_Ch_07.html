@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var getBig = function (str) {
+    return str.toUpperCase();
+};
+
+var getSmall = function (str) {
+    return str.toLowerCase();
+};
+
+var planet = "Jupiter";
+var bigPlanet = getBig(planet);
+var smallPlanet = getSmall(planet);
+
+console.log(planet + " becomes " + bigPlanet);
+console.log(planet + " becomes " + smallPlanet);
+
+console.log(getBig("Mars"));
+console.log(getSmall("Venus"));
+console.log(getBig("Earth"));
+console.log(getSmall("Saturn"));
+
+    </script>
+</body>
+</html>
