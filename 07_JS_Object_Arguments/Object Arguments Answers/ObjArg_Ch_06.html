@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var line = function (lineLength) {
+    var line = "========================================";
+    lineLength = Math.max(0, lineLength);
+    lineLength = Math.min(40, lineLength);
+    return line.substr(0, lineLength);
+};
+
+var spaces = function (spaceLength) {
+    var spaces = "                                        "; 
+    spaceLength = Math.max(0, spaceLength);
+    spaceLength = Math.min(40, spaceLength);
+    return spaces.substr(0, spaceLength);
+};
+
+var emptyBox = function (width) {
+    var topBottom = line(width);
+    var middle = "=" + spaces(width - 2) + "=";
+
+    console.log(topBottom);
+    for (var i = 0; i < 3; i++) {
+        console.log(middle);
+    }
+    console.log(topBottom);
+};
+
+for (var i = -20; i <= 60; i += 10) {
+    console.log("Line length " + i + ":");
+    console.log(line(i));
+}
+
+console.log();
+
+console.log("Spaces length 5:");
+console.log("'" + spaces(5) + "'");
+
+console.log("Spaces length 40:");
+console.log("'" + spaces(40) + "'");
+
+console.log("Spaces length 50:");
+console.log("'" + spaces(50) + "'");
+
+console.log();
+
+console.log("Empty box of width 12:");
+emptyBox(12);
+
+console.log();
+
+console.log("Empty box of width 40:");
+emptyBox(40);
+
+    </script>
+</body>
+</html>
