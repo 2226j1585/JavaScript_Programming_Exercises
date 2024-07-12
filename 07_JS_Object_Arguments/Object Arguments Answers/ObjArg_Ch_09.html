@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var message = "We choose to go to the Moon!";
+
+var charIndex = message.indexOf("M");
+console.log(message.substr(charIndex, 3)); 
+
+var goIndex = message.indexOf("go");
+console.log("The word 'go' starts at index:", goIndex); 
+
+var chooseIndex = message.indexOf("choose");
+var chooseWord = message.substr(chooseIndex, 6);
+console.log("The word 'choose' is:", chooseWord); 
+
+var moonIndex = message.lastIndexOf("Moon");
+var ooIndex = message.lastIndexOf("oo", moonIndex);
+console.log("The 'oo' in 'Moon' starts at index:", ooIndex); 
+
+console.log(message.substr(ooIndex, 2)); 
+    </script>
+</body>
+</html>
