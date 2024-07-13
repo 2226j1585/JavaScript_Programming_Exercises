@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+var rectangles = [
+    { length: 5, width: 3 },
+    { length: 10, width: 2 },
+    { length: 7, width: 4 }
+];
+
+var assignArea = function(rectangle) {
+    rectangle.area = rectangle.length * rectangle.width;
+};
+
+var showInfo = function(rectangle) {
+    console.log("Length: " + rectangle.length);
+    console.log("Width: " + rectangle.width);
+    console.log("Area: " + rectangle.area);
+};
+
+rectangles.forEach(assignArea);
+rectangles.forEach(showInfo);
+
+    </script>
+</body>
+</html>
