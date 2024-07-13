@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var items;
+var showInfo;
+
+items = [
+  "The Pyramids",
+  "The Grand Canyon",
+  "Bondi Beach"
+];
+
+items.push("The Eiffel Tower");
+items.push("Niagara Falls");
+items[5] = "Mount Everest";
+
+showInfo = function (itemToShow) {
+    console.log(itemToShow + " (" + itemToShow.length + " letters)");
+};
+
+items.forEach(showInfo);
+
+var totalLetters = function () {
+    var total = 0;
+    items.forEach(function (item) {
+        total += item.length;
+    });
+    return total;
+};
+
+console.log("Total number of letters: " + totalLetters());
+
+    </script>
+</body>
+</html>
