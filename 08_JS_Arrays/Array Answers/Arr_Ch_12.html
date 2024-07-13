@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    var displayQuestion = function (questionAndAnswer) {
+    var options = [ "A", "B", "C", "D", "E" ];
+    
+    console.log(questionAndAnswer.question);
+    
+    questionAndAnswer.answers.forEach(function (answer, i) {
+        console.log(options[i] + " - " + answer);
+    });
+};
+
+var question1 = {
+    question: "What is the capital of France?",
+    answers: [
+        "Bordeaux",
+        "F",
+        "Paris",
+        "Brussels"
+    ],
+    correctAnswer: "Paris"
+};
+
+var question2 = {
+    question: "What is the largest planet in our solar system?",
+    answers: [
+        "Earth",
+        "Jupiter",
+        "Mars",
+        "Saturn"
+    ],
+    correctAnswer: "Jupiter"
+};
+
+var question3 = {
+    question: "Who wrote 'To Kill a Mockingbird'?",
+    answers: [
+        "Harper Lee",
+        "J.K. Rowling",
+        "Ernest Hemingway",
+        "Mark Twain"
+    ],
+    correctAnswer: "Harper Lee"
+};
+
+var questions = [question1, question2, question3];
+
+questions.forEach(displayQuestion);
+
+</script>
+</body>
+</html>
