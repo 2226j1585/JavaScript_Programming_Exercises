@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+var getVisitorReport = function (visitorArray, dayInWeek) {
+	var days = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday"
+  ];
+	var index = dayInWeek - 1;
+	var visitorReport;
+
+	visitorReport = "There were ";
+  visitorReport += visitorArray[index];
+  visitorReport += " visitors ";
+	visitorReport += "on " + days[index];
+
+	return visitorReport;
+};
+
+var visitors = [ 354, 132, 210, 221, 481, 178, 94 ];
+
+var reportSaturday = getVisitorReport(visitors, 6);
+var reportSunday = getVisitorReport(visitors, 7);
+
+console.log(reportSaturday); 
+console.log(reportSunday); 
+
+var getMonthlyVisitorReport = function (monthArray, week, day) {
+  var weekArray = monthArray[week - 1];
+  return getVisitorReport(weekArray, day);
+};
+
+var week1 = [ 354, 132, 210, 221, 481, 178, 94 ];
+var week2 = [ 400, 150, 220, 230, 490, 180, 100 ];
+var week3 = [ 380, 140, 215, 225, 485, 175, 98 ];
+var week4 = [ 370, 135, 212, 223, 480, 173, 95 ];
+
+var month = [ week1, week2, week3, week4 ];
+
+var reportWeek2Tuesday = getMonthlyVisitorReport(month, 2, 2);
+console.log(reportWeek2Tuesday); 
+
+var reportWeek3Friday = getMonthlyVisitorReport(month, 3, 5);
+console.log(reportWeek3Friday); 
+
+var reportWeek4Sunday = getMonthlyVisitorReport(month, 4, 7);
+console.log(reportWeek4Sunday); 
+
+    </script>
+</body>
+</html>
