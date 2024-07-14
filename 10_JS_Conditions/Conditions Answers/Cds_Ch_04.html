@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var getGuesser = function () {
+  var secret = Math.floor(Math.random() * 10 + 1);
+
+  return function (userNumber) {
+    if (userNumber === secret) {
+      return "Well done!";
+    } else {
+      return "Unlucky, try again.";
+    }
+  };
+};
+
+var guess = getGuesser();
+guess(2); 
+guess(8); 
+
+var getGuesser = function () {
+  var secret = Math.floor(Math.random() * 21 + 30); 
+
+  return function (userNumber) {
+    if (userNumber === secret) {
+      return "Well done!";
+    } else {
+      return "Unlucky, try again.";
+    }
+  };
+};
+
+var guess = getGuesser();
+guess(32); 
+guess(45); 
+var between = function(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+};
+
+console.log(between(1, 5));   
+console.log(between(100, 200)); 
+
+var between = function(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+};
+
+var getGuesser = function () {
+  var secret = between(30, 50);
+  
+  return function (userNumber) {
+    if (userNumber === secret) {
+      return "Well done!";
+    } else {
+      return "Unlucky, try again.";
+    }
+  };
+};
+
+var guess = getGuesser();
+guess(32); 
+guess(45);
+
+    </script>
+</body>
+</html>
