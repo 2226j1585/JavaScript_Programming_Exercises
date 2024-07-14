@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var getGuesser = function () {
+  var secret = 8;
+
+  return function (userNumber) {
+    if (userNumber === secret) {
+      console.log("Well done!");
+    } else {
+      console.log("Unlucky, try again.");
+    }
+  };
+};
+
+var guess = getGuesser();
+
+guess(2); 
+guess(8);
+
+    </script>
+</body>
+</html>
